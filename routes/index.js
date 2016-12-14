@@ -18,8 +18,9 @@ router.get('/r/:id', function(req, res){
   var id = baseURL + req.params.id;
   req.db.connect(req.dburl, function(err, dbs){
     dbs.collection('urls').findOne({"newURL":id}, function(err, doc){
-      //var redirectURL = doc.originalURL;
+        console.log(doc.originalURL)
         res.redirect("http://" + doc.originalURL)
+
         dbs.close();
 
     })
@@ -29,11 +30,11 @@ router.get('/r/:id', function(req, res){
 
 /* POST -- generate new URL, put it in the db, display new url */
 router.post('/getURL',
-
+//this only increments a base10 counter for the new url, could ad higher base counting to scale up...
 function(req, res, next){
   req.db.connect(req.dburl, function(err, dbs){
     var counter = dbs.collection('counter')
-    counter.findAndModify({_id:"sitename"},{},{$inc: {seq:1}}, {new:true}, function(err,doc){
+    counter.findAndModify({_id:"site"},{},{$inc: {seq:1}}, {new:true}, function(err,doc){
         newURL = baseURL + doc.value.seq
         console.log("url = " + newURL)
       })
