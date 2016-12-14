@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 var mongo = require('mongodb').MongoClient;
 // var monk = require('monk');
 // var db = monk('mongodb://localhost:27017/nodetest1');
-var url = 'mongodb://localhost:27017/nodetest1'
+var url = process.env.MONGOLAB_URI;
 
 
 var index = require('./routes/index');
