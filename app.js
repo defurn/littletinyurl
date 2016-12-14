@@ -6,8 +6,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongo = require('mongodb').MongoClient;
 // var monk = require('monk');
-// var db = monk('mongodb://localhost:27017/nodetest1');
-var url = 'mongodb://site:password@ds133358.mlab.com:33358/herokuapp'
+//var url = 'mongodb://localhost:27017/herokuapp';
+var url = 'mongodb://site:password@ds133358.mlab.com:33358/herokuapp';
 
 
 var index = require('./routes/index');
