@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1= title
+  form(action="/getURL" method="post")
+    p enter long url
+    input(type="text", name="id")
+    input(type="submit")
