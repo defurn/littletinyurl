@@ -7,7 +7,13 @@ var baseURL = "https://littletinyurl.herokuapp.com/r/"
 
 //just need to do the magic for making the correct new URL...
 function generateURL(id){
-  return baseURL += id;
+  var ret = dbs.counters.findAndModify(
+    {query: {"_id": id},
+    update: { $inc: { seq: 1 }},
+    new: true
+  }
+);
+  return baseURL += ret.seq;
 }
 
 /* GET home page. */
