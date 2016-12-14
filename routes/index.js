@@ -3,7 +3,7 @@ var router = express.Router();
 var transcodingKeys = {
   0:"0", 1:"1", 2:"2", 3:"3", 4:"4", 5:"5", 6:"6",
 }
-var baseURL = "https://littletinyurl.herokuapp.com/"
+var baseURL = "https://littletinyurl.herokuapp.com/r/"
 
 //just need to do the magic for making the correct new URL...
 function generateURL(id){
@@ -20,7 +20,7 @@ router.get('/r/:id', function(req, res){
   req.db.connect(req.dburl, function(err, dbs){
     dbs.collection('urls').findOne({"newURL":id}, function(err, doc){
       //var redirectURL = doc.originalURL;
-        res.redirect("http://" + doc.originalURL);//redirect?? doesn't work..
+        res.redirect("http://" + doc.originalURL);
         dbs.close();
 
     })
