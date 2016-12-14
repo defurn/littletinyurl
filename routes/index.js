@@ -3,7 +3,7 @@ var router = express.Router();
 var transcodingKeys = {
   0:"0", 1:"1", 2:"2", 3:"3", 4:"4", 5:"5", 6:"6",
 }
-var baseURL = "http://localhost:3000/r/"
+var baseURL = "https://littletinyurl.herokuapp.com/"
 
 //just need to do the magic for making the correct new URL...
 function generateURL(id){
