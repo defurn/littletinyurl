@@ -18,7 +18,7 @@
 9 verbose stack     at maybeClose (internal/child_process.js:854:16)
 9 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:222:5)
 10 verbose pkgid nodetest1@0.0.0
-11 verbose cwd /home/def/homepage/littletinyurl/nodetest1
+11 verbose cwd /home/def/homepage/littletinyurl
 12 error Linux 4.4.0-53-generic
 13 error argv "/usr/bin/nodejs" "/usr/bin/npm" "start"
 14 error node v4.7.0

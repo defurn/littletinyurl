@@ -58,23 +58,5 @@ function(req, res){
     })
   })
 })
-//this is not working, does not return the newURL
 
-
-/* GET short url */
-// router.get('/newURL', function(req, res){
-//   req.db.connect(req.dburl, function(err, dbs){
-//     var collection = dbs.collection('urls');
-//     var id = req.query.id;
-//     collection.findOne({"originalURL":id}, function(err, doc){
-//       console.log(doc);
-//       res.render('url', {
-//         "newURL": doc.newURL
-//       });
-//       dbs.close();
-//     });
-//
-//   });
-//
-// });
 module.exports = router

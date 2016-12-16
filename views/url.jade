@@ -2,4 +2,5 @@ extends layout
 
 block content
   h1 your short url
-  h3= newURL
+  h3
+    a(href=newURL) #{newURL}

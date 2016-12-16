@@ -1,8 +1,16 @@
 extends layout
 
 block content
-  h1= title
-  form(action="/getURL" method="post")
-    p enter long url
-    input(type="text", name="id")
-    input(type="submit")
+  .main
+    h1= title
+    form(action="/getURL" method="post")
+
+      input(type="text", name="id", value="enter long url")
+
+      input(type="submit")
+    p
+      .small *this is just a project demonstration of running a mongodb/express/node site, hosted by heroku. so it doesn't actually make a 'shorter' url, just a different one, which will redirect you to your original url :)
+    .footer
+
+      p created by
+        a(href="http://defurn.github.io") defurni
